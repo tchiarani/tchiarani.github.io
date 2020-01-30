@@ -1,7 +1,6 @@
 const Discord = require('discord.js')
 
 const client = new Discord.Client()
-console.log(process.env.TOKEN)
 client.login(process.env.TOKEN)
 client.on('message', msg => {
     const guildTag = msg.channel.type === 'text' ? `[${msg.guild.name}]` : '[DM]'
