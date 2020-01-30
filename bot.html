@@ -13,6 +13,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script type="text/javascript" src="assets/js/discord.11.5.0.min.js"></script>
+    <script type="text/javascript">
+        const client = new Discord.Client()
+        client.login(process.env.TOKEN)
+        client.on('message', msg => {
+            const guildTag = msg.channel.type === 'text' ? `[${msg.guild.name}]` : '[DM]'
+            const channelTag = msg.channel.type === 'text' ? `[#${msg.channel.name}]` : ''
+            console.log(`${guildTag}${channelTag} ${msg.author.tag} : ${msg.content}`)
+        });
+    </script>
 </head>
 
 <body class="is-preload">
@@ -79,13 +89,13 @@
                                         <td>/p <i>[mots-clés]<br/>/p <i>[url]</i><br/>/p <i>[radio]</i><br/>/p <i>[radio] [volume]</i><br/>/p <i>[musique]</i><br/>/p <i>[musique] [volume]</i></td>
                                         <td>Lance une musique depuis YouTube<br/><br/>Lance une radio enregistrée<br/><br/>Lance une musique enregistrée</td>
                                     </tr>
-				    <tr>
+                                    <tr>
                                         <td>/skip</td>
                                         <td></td>
                                         <td>/skip</td>
                                         <td>Passe à la musique suivante</td>
                                     </tr>
-				    <tr>
+                                    <tr>
                                         <td>/queue</td>
                                         <td>/q</td>
                                         <td>/queue</td>
@@ -121,13 +131,13 @@
                                         <td>/r <i>[url]</i></td>
                                         <td>Lance une webradio</td>
                                     </tr>
-				    <tr>
+                                    <tr>
                                         <td>/purge</td>
                                         <td></td>
                                         <td>/purge <i>[nombre]</i></td>
                                         <td>Supprime les <i>[nombre]</i> derniers messages</td>
                                     </tr>
-				    <tr>
+                                    <tr>
                                         <td>/sondage</td>
                                         <td>/poll</td>
                                         <td>/poll <i>[question ? "choix 1" "choix 2" ... ]</i></td>
