@@ -10,15 +10,14 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <script type="text/javascript" src="discord.11.5.0.min.js"></script>
     <script type="text/javascript">
-        const client = new Discord.Client();
-
+        const client = new Discord.Client()
+        client.login('Mzk4NDg2Mzg2MTExNTQ1MzQ0.Xi8hqw.CvunE2vx_YF6JC6jL-gR3bClFWI')
         client.on('message', msg => {
-            const guildTag = msg.channel.type === 'text' ? `[${msg.guild.name}]` : '[DM]';
-            const channelTag = msg.channel.type === 'text' ? `[#${msg.channel.name}]` : '';
-            console.log(`${guildTag}${channelTag} ${msg.author.tag}: ${msg.content}`);
+            const guildTag = msg.channel.type === 'text' ? `[${msg.guild.name}]` : '[DM]'
+            const channelTag = msg.channel.type === 'text' ? `[#${msg.channel.name}]` : ''
+            console.log("Nouveau message")
+            console.log(`${guildTag}${channelTag} ${msg.author.tag}: ${msg.content}`)
         });
-
-        client.login('Mzk4NDg2Mzg2MTExNTQ1MzQ0.Xi8hqw.CvunE2vx_YF6JC6jL-gR3bClFWI');
     </script>
 </head>
 
