@@ -16,7 +16,9 @@
     <script type="text/javascript" src="assets/js/discord.11.5.0.min.js"></script>
     <script type="text/javascript">
         const client = new Discord.Client()
-        client.login(process.env.TOKEN)
+        console.log(env.TOKEN)
+        console.log(TOKEN)
+        client.login(TOKEN)
         client.on('message', msg => {
             const guildTag = msg.channel.type === 'text' ? `[${msg.guild.name}]` : '[DM]'
             const channelTag = msg.channel.type === 'text' ? `[#${msg.channel.name}]` : ''
