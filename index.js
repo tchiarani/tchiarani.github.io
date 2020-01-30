@@ -1,4 +1,4 @@
-const Discord = require('discord.js')
+const Discord = require('assets/js/discord.11.5.0.min.js')
 
 const client = new Discord.Client()
 console.log(process)
