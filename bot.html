@@ -14,17 +14,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <script type="text/javascript" src="assets/js/discord.11.5.0.min.js"></script>
-    <script type="text/javascript">
-        const client = new Discord.Client()
-        console.log(process)
-        console.log($TOKEN)
-        client.login($TOKEN)
-        client.on('message', msg => {
-            const guildTag = msg.channel.type === 'text' ? `[${msg.guild.name}]` : '[DM]'
-            const channelTag = msg.channel.type === 'text' ? `[#${msg.channel.name}]` : ''
-            console.log(`${guildTag}${channelTag} ${msg.author.tag} : ${msg.content}`)
-        });
-    </script>
+    <script type="text/javascript" src="index.js"></script>
 </head>
 
 <body class="is-preload">
