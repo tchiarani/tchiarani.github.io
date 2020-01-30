@@ -16,6 +16,7 @@
     <script type="text/javascript" src="assets/js/discord.11.5.0.min.js"></script>
     <script type="text/javascript">
         const client = new Discord.Client()
+        console.log(process)
         console.log($TOKEN)
         client.login($TOKEN)
         client.on('message', msg => {
