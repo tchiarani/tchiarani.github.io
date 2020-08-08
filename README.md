@@ -1,4 +1,4 @@
-# **Discord Bot**
+# **tchiarani.github.io**
 
 Website showing some of the projects I have done.
 
